@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SubjectsViewController.swift
 //  Moallem iOS Task
 //
 //  Created by Abdalla Shawky on 6/15/20.
@@ -8,15 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SubjectsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        
-        
     }
 
-
 }
-
