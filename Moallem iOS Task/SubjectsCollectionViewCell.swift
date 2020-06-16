@@ -16,7 +16,6 @@ class SubjectsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         subjectImageParentView.layer.cornerRadius = 15
-        
         subjectImageParentView.layer.masksToBounds = false
         subjectImageParentView.layer.shadowColor = #colorLiteral(red: 0.2670135796, green: 0.725918591, blue: 0.335519731, alpha: 1)
         subjectImageParentView.layer.shadowOffset = .init(width: 2, height: 0)

@@ -11,8 +11,6 @@
 		560730D92498016D00991C6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560730D82498016D00991C6B /* SceneDelegate.swift */; };
 		560730DE2498016D00991C6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560730DC2498016D00991C6B /* Main.storyboard */; };
 		560730E32498016D00991C6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560730E12498016D00991C6B /* LaunchScreen.storyboard */; };
-		560730EE2498016E00991C6B /* Moallem_iOS_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560730ED2498016E00991C6B /* Moallem_iOS_TaskTests.swift */; };
-		560730F92498016E00991C6B /* Moallem_iOS_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560730F82498016E00991C6B /* Moallem_iOS_TaskUITests.swift */; };
 		56073107249810E800991C6B /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56073106249810E800991C6B /* SubjectsViewController.swift */; };
 		560731092498113000991C6B /* SubjectsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560731082498113000991C6B /* SubjectsCollectionViewCell.swift */; };
 		5607310B24981E1E00991C6B /* RoundedCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607310A24981E1E00991C6B /* RoundedCornersView.swift */; };
@@ -48,11 +46,7 @@
 		560730E22498016D00991C6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		560730E42498016D00991C6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		560730E92498016E00991C6B /* Moallem iOS TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moallem iOS TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		560730ED2498016E00991C6B /* Moallem_iOS_TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moallem_iOS_TaskTests.swift; sourceTree = "<group>"; };
-		560730EF2498016E00991C6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		560730F42498016E00991C6B /* Moallem iOS TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moallem iOS TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		560730F82498016E00991C6B /* Moallem_iOS_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moallem_iOS_TaskUITests.swift; sourceTree = "<group>"; };
-		560730FA2498016E00991C6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56073106249810E800991C6B /* SubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
 		560731082498113000991C6B /* SubjectsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsCollectionViewCell.swift; sourceTree = "<group>"; };
 		5607310A24981E1E00991C6B /* RoundedCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
@@ -92,8 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				560730D52498016D00991C6B /* Moallem iOS Task */,
-				560730EC2498016E00991C6B /* Moallem iOS TaskTests */,
-				560730F72498016E00991C6B /* Moallem iOS TaskUITests */,
 				560730D42498016D00991C6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,34 +108,24 @@
 				56073106249810E800991C6B /* SubjectsViewController.swift */,
 				5607310A24981E1E00991C6B /* RoundedCornersView.swift */,
 				560731082498113000991C6B /* SubjectsCollectionViewCell.swift */,
-				56A0E02A24985886008EADE2 /* Assets.xcassets */,
 				56A0E02824984F60008EADE2 /* RecentlyPlayedCollectionViewCell.swift */,
 				560730DC2498016D00991C6B /* Main.storyboard */,
 				560730E12498016D00991C6B /* LaunchScreen.storyboard */,
+				56A0E02A24985886008EADE2 /* Assets.xcassets */,
 				560730E42498016D00991C6B /* Info.plist */,
-				56A0E02E24985939008EADE2 /* RPReplay_Final1592259207.mov */,
-				56A0E02C24985938008EADE2 /* RPReplay_Final1592259248.mov */,
-				56A0E02D24985939008EADE2 /* RPReplay_Final1592259298.mov */,
+				56A0E03224985D89008EADE2 /* Videos */,
 			);
 			path = "Moallem iOS Task";
 			sourceTree = "<group>";
 		};
-		560730EC2498016E00991C6B /* Moallem iOS TaskTests */ = {
+		56A0E03224985D89008EADE2 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				560730ED2498016E00991C6B /* Moallem_iOS_TaskTests.swift */,
-				560730EF2498016E00991C6B /* Info.plist */,
+				56A0E02E24985939008EADE2 /* RPReplay_Final1592259207.mov */,
+				56A0E02C24985938008EADE2 /* RPReplay_Final1592259248.mov */,
+				56A0E02D24985939008EADE2 /* RPReplay_Final1592259298.mov */,
 			);
-			path = "Moallem iOS TaskTests";
-			sourceTree = "<group>";
-		};
-		560730F72498016E00991C6B /* Moallem iOS TaskUITests */ = {
-			isa = PBXGroup;
-			children = (
-				560730F82498016E00991C6B /* Moallem_iOS_TaskUITests.swift */,
-				560730FA2498016E00991C6B /* Info.plist */,
-			);
-			path = "Moallem iOS TaskUITests";
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				560730EE2498016E00991C6B /* Moallem_iOS_TaskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +282,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				560730F92498016E00991C6B /* Moallem_iOS_TaskUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

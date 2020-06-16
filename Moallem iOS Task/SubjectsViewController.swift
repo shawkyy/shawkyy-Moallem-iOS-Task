@@ -10,64 +10,54 @@ import UIKit
 import AVFoundation
 import AVKit
 
-
 class SubjectsViewController: UIViewController {
-
-    @IBOutlet weak var playOutlet: UIButton!
-    var subjects = ["Physics","Biology","History","Algebra","Math","Arabic","Science"]
-    var recentlyPlayed = ["RPReplay_Final1592259207","RPReplay_Final1592259248","RPReplay_Final1592259298"]
+    
+   private var subjects = ["Physics","Biology","History","Algebra","Math","Arabic","Science"]
+   private var recentlyPlayed = ["RPReplay_Final1592259207","RPReplay_Final1592259248","RPReplay_Final1592259298"]
     
     @IBOutlet weak var subjectsCollectionView: UICollectionView!
     @IBOutlet weak var recentlyPlayedCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        subjectsCollectionView.dataSource = self
-        recentlyPlayedCollectionView.delegate = self
-        recentlyPlayedCollectionView.dataSource = self
+        settingUpDelegates()
     }
-
     
+    private func settingUpDelegates() {
+         subjectsCollectionView.dataSource = self
+         recentlyPlayedCollectionView.delegate = self
+         recentlyPlayedCollectionView.dataSource = self
+     }
+     
     private func playVideo(for indexPath: IndexPath) {
         guard let path = Bundle.main.path(forResource: recentlyPlayed[indexPath.row], ofType:"mov") else {
-        debugPrint("video.m4v not found")
-        return
-    }
-        
-    let player = AVPlayer(url: URL(fileURLWithPath: path))
-    let playerController = AVPlayerViewController()
-    playerController.player = player
-    present(playerController, animated: true) {
-        player.play()
-    }
-    
-    
-}
-    
-    
-    @IBAction func play(_ sender: Any) {
-//        playVideo()
+            print("video is not found")
+            return
+        }
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        present(playerController, animated: true) {
+            player.play()
+        }
     }
     
-    func createThumbnail(for indexPath:IndexPath) -> UIImage?{
-        
+    private func createThumbnail(for indexPath:IndexPath) -> UIImage?{
         let path = Bundle.main.url(forResource: recentlyPlayed[indexPath.row], withExtension: "mov")
-     do {
+        do {
             let asset = AVURLAsset(url: path!, options: nil)
             let imgGenerator = AVAssetImageGenerator(asset: asset)
             imgGenerator.appliesPreferredTrackTransform = true
             let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(value: 3, timescale: 4), actualTime: nil)
             let thumbnail = UIImage(cgImage: cgImage)
-        return thumbnail
-//        self.playOutlet.setBackgroundImage(thumbnail, for: .normal)
-
+            return thumbnail
         } catch let error {
             print("*** Error generating thumbnail: \(error.localizedDescription)")
         }
         return nil
     }
-    
 }
+
 extension SubjectsViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
@@ -75,13 +65,11 @@ extension SubjectsViewController: UICollectionViewDataSource, UICollectionViewDe
             return subjects.count
         default:
             return recentlyPlayed.count
-            
         }
-
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
+        
         switch collectionView {
         case subjectsCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubjectCell", for: indexPath) as? SubjectsCollectionViewCell else {
